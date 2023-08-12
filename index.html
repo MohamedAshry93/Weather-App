@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mohamed Ashry">
+    <meta name="description" content="Weather">
+    <meta name="keywords" content="html,css,bootstrap,js">
+    <title>Weather App</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/cloudy_1163657.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap Framework-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS File Link Here...  -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg bg-black fixed-top pt-4 pb-4 ">
+        <div class="container">
+            <div class="w-10 justify-content-center d-flex align-items-center">
+                <img src="images/sun_2698213.png" alt="weather-logo" class="w-25">
+                <div class="d-flex flex-column ms-3">
+                    <a class="navbar-brand pb-0 fw-bold text-white" href="#">Weather</a>
+                    <small class="site-description mt-0 text-white ">tagline goes here</small>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link fw-bold" href="#">News</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link fw-bold" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link fw-bold" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link fw-bold" href="#">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <!---Start Main Section --->
+    <header class="">
+        <div class="container">
+            <form class="position-relative">
+                <input type="text" class="w-100 mx-auto rounded rounded-5 mt-5 text-white mb-3"
+                    placeholder="Find your location..." id="search">
+                <input type="button" class="btn btn-info position-absolute find" value="Find">
+            </form>
+            <div class="row">
+                <!---Today Date Section --->
+                <div class="col-md-4 bg-color pe-0 ps-0">
+                    <div class="d-flex justify-content-between date">
+                        <p id="todayName">Saturday</p>
+                        <div class="d-flex">
+                            <p id="dateNumber" class="me-2">12</p>
+                            <p id="monthName">August</p>
+
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <p class="fs-4 mt-4 ms-2" id="cityName"></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="temp fw-bolder">
+                                <span id="todayTemperature"></span>
+                                <span><sup>o</sup>C</span>
+                            </span>
+                            <img src="images/113.webp" id="todayConditionImg" class="w-25" alt="temp-logo">
+                        </div>
+                        <p class="text-primary ms-2" id="todayCondition"></p>
+                    </div>
+                    <div class="d-flex p-3">
+                        <div class="d-flex me-3">
+                            <img src="images/icon-umberella@2x.png" width="20" height="20" alt="umbrella">
+                            <p class="ms-2" id="humidity">%</p>
+                        </div>
+                        <div class="d-flex me-3">
+                            <img src="images/icon-wind@2x.png" width="20" height="20" alt="wind">
+                            <p class="ms-2" id="wind">km/hr</p>
+                        </div>
+                        <div class="d-flex">
+                            <img src="images/icon-compass@2x.png" width="20" height="20" alt="wind">
+                            <p class="ms-2" id="windDirection"></p>
+                        </div>
+                    </div>
+                </div>
+                <!---Tomorrow Date Section --->
+                <div class="col-md-4 bg-color2 pe-0 ps-0">
+                    <div class="text-center date">
+                        <p id="nextDayName">Sunday</p>
+                    </div>
+                    <div class="p-4 text-center">
+                        <img src="images/113.webp" id="nextDayConditionImg" class="" alt="temp-logo">
+                        <h3 class="fw-bolder">
+                            <span id="nextDayMaxTemperature"></span>
+                            <span><sup>o</sup>C</span>
+                        </h3>
+                        <small>
+                            <span id="nextDayMinTemperature"></span>
+                            <span><sup>o</sup></span>
+                        </small>
+                        <p class="text-primary mt-4" id="nextDayCondition"></p>
+                    </div>
+                </div>
+                <!---After Tomorrow Date Section --->
+                <div class="col-md-4 bg-color pe-0 ps-0">
+                    <div class="text-center date">
+                        <p id="nextDayName">Monday</p>
+                    </div>
+                    <div class="p-4 text-center">
+                        <img src="images/113.webp" id="nextDayConditionImg" class="" alt="temp-logo">
+                        <h3 class="fw-bolder">
+                            <span id="nextDayMaxTemperature"></span>
+                            <span><sup>o</sup>C</span>
+                        </h3>
+                        <small>
+                            <span id="nextDayMinTemperature"></span>
+                            <span><sup>o</sup></span>
+                        </small>
+                        <p class="text-primary mt-4" id="nextDayCondition"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <form class="position-relative">
+                        <input type="text" class="w-100 mx-auto rounded rounded-5 mt-5 text-white mb-3"
+                            placeholder="Find your location..." id="search">
+                        <input type="button" class="btn btn-info position-absolute find" value="Subscribe">
+                    </form>
+                </div>
+                <div class="col-md-3 offset-1">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <p class="mt-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

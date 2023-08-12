@@ -1,0 +1,135 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #bfc1c8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Start Navbar */
+.w-10 {
+    width: 20%;
+}
+
+.site-description {
+    font-size: 0.8rem !important;
+    cursor: pointer !important;
+}
+
+.navbar-nav .nav-item a {
+    color: #fff !important;
+    font-size: 0.875rem;
+}
+
+.navbar-nav .nav-item {
+    padding: 0px 20px;
+    border: 2px solid transparent;
+    border-radius: 1.875rem;
+    color: white;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-weight: 400;
+}
+
+.navbar-nav .nav-item:hover {
+    border-color: #009ad8;
+    color: #009ad8;
+}
+
+.navbar-nav .nav-item:hover a {
+    color: #009ad8 !important;
+}
+
+/* End navbar*/
+/* start Main section */
+header {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    margin-top: 110px;
+    min-height: 350px;
+    padding-bottom: 72px;
+    background-position: 0px 0px;
+    background-color: #1e202b;
+}
+
+.bg-color {
+    background: #323544 !important;
+}
+
+.bg-color2 {
+    background: #262936;
+}
+
+form .find {
+    top: 54px;
+    right: 5px;
+    bottom: 24px;
+    padding: 0 40px !important;
+    border: none;
+    background: #009ad8;
+    border-radius: 30px;
+    color: white;
+}
+
+form input {
+    padding: 20px 50px 20px 20px !important;
+    background-color: #1e202b;
+}
+
+.date {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px 10px 1px 10px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.temp {
+    font-size: 5.1rem;
+    margin-right: 30px;
+    color: #fff;
+}
+
+h3 {
+    font-size: 3rem;
+    color: white;
+}
+
+small {
+    font-size: 1.5rem;
+}
+
+footer {
+    background: #262936;
+    padding: 50px 0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1e202b;
+    color: #009ad8;
+    line-height: 2;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-size: 20px;
+    font-size: 1.4285714286rem;
+}
+
+.icon:hover {
+    background: #009ad8;
+    color: white;
+}
